@@ -1,0 +1,139 @@
+/* Estilo global para todos os elementos. Define algumas configurações padrões. */
+*{
+    margin: 0 auto;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* Estilos para o corpo da página. Define a cor de fundo, a altura e o layout centralizado. */
+body{
+    background-color: rgb(30, 29, 36);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Configurações para o contêiner principal, limitando sua largura e estabelecendo um layout flexível centrado. */
+.container {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 14px;
+}
+
+/* Configuração para a imagem do logo, definindo sua largura máxima. */
+.logo {
+    max-width: 227px;
+}
+
+/* Estilos para o título principal, definindo cor, margem e alinhamento. */
+.title {
+    text-align: center;
+    color: #fff;
+    margin: 24px 0;
+}
+
+/* Estilos para os rótulos dentro do formulário, como cor e tamanho da fonte. */
+.form label {
+    color: #fff;
+    font-size: 20px;
+}
+
+/* Estilos para campos de entrada, como dimensões, espaçamento, fonte e formato. */
+.input {
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    font-size: 20px;
+    padding: 0 14px;
+    margin-top: 8;
+    margin-bottom: 16px;
+}
+
+/* Estilos para o botão, como cores, fonte, formato e interatividade. */
+.button {
+    width: 100%;
+    height: 48px;
+    background-color: rgb(7, 205, 240);
+    cursor: pointer;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Estilos para a seção de resultados, incluindo cores, formato, margens e interatividade. */
+.result {
+    background-color: rgb(0, 255, 85);
+    max-width: 520px;
+    padding: 20px 28px;
+    text-align: center;
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #696969;
+    border-radius: 8px;
+    user-select: none;
+    transition: trasform 0.10s;
+}
+
+/* Classe utilitária para ocultar elementos. */
+.hide {
+    display: none;
+}
+
+/* Adiciona um efeito de ampliação ao passar o mouse sobre o resultado. */
+.result:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos básicos para os textos dentro da seção de resultados. */
+.result span {
+    color:#fff;
+    margin-bottom: 8px;
+}
+
+/* Estilos para o texto principal dentro da seção de resultados. */
+#text-result {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilos para a seção de informação, geralmente no canto inferior direito. */
+.info {
+    position: fixed;
+    right: 14px;
+    bottom: 22px;
+}
+
+/* Estilos para a imagem dentro da seção de informação, incluindo interatividade. */
+.info-img {
+    width: 66px;
+    height: 66px;
+    transition: transform 0.10s;
+}
+
+.info-img:hover{
+    transform: scale(1.1);
+}
+
+/* Estilos para a tooltip, um pequeno pop-up informativo. */
+.tooltip {
+    color: #fff;
+    background-color: #151515;
+    padding: 10px 8px;
+    border-radius: 8px;
+    position: relative;
+    bottom: 65px;
+    display: none;
+}
+
+/* Mostra a tooltip quando se passa o mouse sobre a seção de informação. */
+.info:hover .tooltip {
+    display: inline;
+}

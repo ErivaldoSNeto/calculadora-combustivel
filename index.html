@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Configuração básica da página e do charset -->
+    <meta charset="UTF-8">
+    <!-- Configuração de viewport para otimizar a visualização em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tag para ajudar na otimização do SEO ao inserir palavras-chave -->
+    <meta name="keywords" content="Calculadora gasolina ou álcool">
+    <!-- Linkando o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css"/>
+    <!-- Título da aba da página no navegador -->
+    <title>Calculadora gasolina ou álcool</title>
+</head>
+<body>
+
+    <main class="container">
+        <!-- Logo da calculadora -->
+        <img class="logo" src="logo.png" alt="logo calculador"/>
+        <!-- Título principal da página -->
+        <h1 class="title">Qual melhor opção?</h1>
+
+        <!-- Formulário onde o usuário insere os preços dos combustíveis -->
+        <form onsubmit="calcular(event)" class="form">
+            <!-- Label e campo para inserção do preço do álcool -->
+            <label>Álcool (preço por litro):</label>
+            <input
+             id="alcool"
+             class="input"
+             type="number"
+             placeholder="4.73"
+             min="1"
+             step="0.01"
+             required
+            />
+
+            <!-- Label e campo para inserção do preço da gasolina -->
+            <label>Gasolina (preço por litro):</label>
+            <input
+             id="gasolina"
+             class="input"
+             type="number"
+             placeholder="5.97"
+             min="1"
+             step="0.01"
+             required
+            />
+
+            <!-- Botão para enviar os valores inseridos e calcular -->
+            <input class="button" type="submit" value="Calcular"/>
+        </form>
+
+        <!-- Seção onde o resultado do cálculo será exibido -->
+        <section id="content-result" class="result hide">
+            <span id="text-result">Compensa usar álcool</span>
+            <span id="alcool-result">Álcool R$ 4.73</span>
+            <span id="gasolina-result">Gasolina R$ 5.97</span>
+        </section>
+
+    </main>
+
+    <!-- Seção de informação adicional -->
+    <div class="info">
+        <!-- Tooltip com mensagem extra -->
+        <span class="tooltip">Não esqueça de conferir os outros projetos!</span>
+        <!-- Link para um perfil do Instagram  -->
+        <a href="https://instagram.com/dev.loco?igshid=NzZhOTFlYzFmZQ==" target="_blank">
+        <!-- Imagem associada ao link -->
+        <img class="info-img" src="info.png" alt="Siga nas redes sociais"/>
+        </a>
+    </div>
+
+    <!-- Importando o arquivo JavaScript que gerencia as funcionalidades do site -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
